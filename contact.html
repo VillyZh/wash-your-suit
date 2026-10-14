@@ -5,16 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact &middot; Did you wash your caving suit?</title>
   <meta name="description" content="Contact the team behind the white-nose disease caving hygiene project.">
+  <meta name="theme-color" content="#128a5a">
+  <link rel="icon" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="site-header">
-    <div class="site-header__inner">
+    <div class="container site-header__inner">
       <a class="site-brand" href="index.html">
         <img src="images/logo.png" alt="">
-        <span>Did you wash your caving suit?</span>
+        <span class="site-brand__name">Did you wash your caving suit?</span>
       </a>
-      <nav class="site-nav" aria-label="Main">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        <span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
         <ul>
           <li><a href="index.html">Prevent the spread of white-nose disease</a></li>
           <li><a href="library.html">Language library</a></li>
@@ -25,19 +36,33 @@
     </div>
   </header>
 
-  <main>
-    <h1>Contact</h1>
+  <main id="main">
+    <div class="container content">
+      <header class="page-head">
+        <h1>Contact</h1>
+      </header>
 
-    <h2>Violeta Zhelyazkova</h2>
-    <p>
-      <a href="https://www.nmnhs.com/">National Museum of Natural History Sofia</a><br>
-      <a href="mailto:violeta.lyubomirova@gmail.com">violeta.lyubomirova@gmail.com</a>
-    </p>
+      <section class="section reveal">
+        <div class="card">
+          <h2>Violeta Zhelyazkova</h2>
+          <p>
+            <a href="https://www.nmnhs.com/">National Museum of Natural History Sofia</a><br>
+            <a href="mailto:violeta.lyubomirova@gmail.com">violeta.lyubomirova@gmail.com</a>
+          </p>
+        </div>
+      </section>
+    </div>
   </main>
 
   <footer class="site-footer">
-    <div class="site-footer__inner">
-      <p>Did you wash your caving suit? &middot; <a href="contact.html">Contact us</a></p>
+    <div class="container site-footer__inner">
+      <p>Did you wash your caving suit?</p>
+      <nav aria-label="Footer">
+        <a href="index.html">Prevent the spread of white-nose disease</a>
+        <a href="library.html">Language library</a>
+        <a href="contact.html">Contact</a>
+        <a href="projects.html">Project Berger 2026</a>
+      </nav>
     </div>
   </footer>
 </body>

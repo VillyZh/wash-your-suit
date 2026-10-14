@@ -5,16 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Language library &middot; Did you wash your caving suit?</title>
   <meta name="description" content="White-nose disease hygiene instructions and flyers in multiple languages.">
+  <meta name="theme-color" content="#128a5a">
+  <link rel="icon" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="site-header">
-    <div class="site-header__inner">
+    <div class="container site-header__inner">
       <a class="site-brand" href="index.html">
         <img src="images/logo.png" alt="">
-        <span>Did you wash your caving suit?</span>
+        <span class="site-brand__name">Did you wash your caving suit?</span>
       </a>
-      <nav class="site-nav" aria-label="Main">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        <span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
         <ul>
           <li><a href="index.html">Prevent the spread of white-nose disease</a></li>
           <li><a href="library.html" aria-current="page">Language library</a></li>
@@ -25,52 +36,78 @@
     </div>
   </header>
 
-  <main>
-    <h1>Language library</h1>
-    <p class="lead">Hygiene instructions and flyers for bat-friendly caving, available for download in the languages below.</p>
+  <main id="main">
+    <div class="container">
+      <header class="page-head">
+        <h1>Language library</h1>
+        <p class="lead">Hygiene instructions and flyers for bat-friendly caving, available for download in the languages below.</p>
+      </header>
 
-    <ul class="lang-list">
-      <li class="lang-card">
-        <img src="images/flag-hygiene.png" alt="">
-        <h2><a href="downloads/WND-instructions-EN.pdf">Hygiene instructions</a></h2>
-        <a class="flyer-link" href="downloads/WND_flyer_EN.png">Flyer</a>
-      </li>
-      <li class="lang-card">
-        <img src="images/flag-bg.jpg" alt="">
-        <h2><a href="downloads/WND-instructions-BG.pdf">Хигиенни инструкции</a></h2>
-        <a class="flyer-link" href="downloads/WND_flyer_BG.png">Брошура</a>
-      </li>
-      <li class="lang-card">
-        <img src="images/flag-fr.png" alt="">
-        <h2><a href="downloads/WND-instructions-FR.pdf">Instructions d&rsquo;hygiène</a></h2>
-        <a class="flyer-link" href="downloads/WND_flyer_FR.png">Brochure</a>
-      </li>
-      <li class="lang-card">
-        <img src="images/flag-es.png" alt="">
-        <h2><a href="downloads/WND-instructions-ES.pdf">Instrucciones de higiene</a></h2>
-        <a class="flyer-link" href="downloads/WND_flyer_ES.png">Folleto informativo</a>
-      </li>
-      <li class="lang-card">
-        <img src="images/flag-slovenia.png" alt="">
-        <h2><a href="downloads/WND-instructions-SLO.pdf">Higienska navodila</a></h2>
-        <a class="flyer-link" href="downloads/WND_flyer_SLO.png">Brošura</a>
-      </li>
-      <li class="lang-card">
-        <img src="images/flag-ru.png" alt="">
-        <h2><a href="downloads/WND-instructions-RU.pdf">Гигиенические инструкции</a></h2>
-        <a class="flyer-link" href="downloads/WND_flyer_RU.png">Информационная брошюра</a>
-      </li>
-      <li class="lang-card">
-        <img src="images/flag-tr.jpg" alt="">
-        <h2><a href="downloads/WND-instructions-TR.pdf">Hijyen kuralları</a></h2>
-        <a class="flyer-link" href="downloads/WND_flyer_TR.png">Bilgilendirme broşürü</a>
-      </li>
-    </ul>
+      <section class="section reveal">
+        <ul class="lang-list">
+          <li class="lang-card">
+            <img class="lang-card__flag" src="images/flag-hygiene.png" alt="">
+            <h2 class="lang-card__name"><a href="downloads/WND-instructions-EN.pdf">Hygiene instructions</a></h2>
+            <div class="lang-card__actions">
+              <a class="btn btn--ghost btn--sm" href="downloads/WND_flyer_EN.png">Flyer</a>
+            </div>
+          </li>
+          <li class="lang-card">
+            <img class="lang-card__flag" src="images/flag-bg.jpg" alt="">
+            <h2 class="lang-card__name"><a href="downloads/WND-instructions-BG.pdf">Хигиенни инструкции</a></h2>
+            <div class="lang-card__actions">
+              <a class="btn btn--ghost btn--sm" href="downloads/WND_flyer_BG.png">Брошура</a>
+            </div>
+          </li>
+          <li class="lang-card">
+            <img class="lang-card__flag" src="images/flag-fr.png" alt="">
+            <h2 class="lang-card__name"><a href="downloads/WND-instructions-FR.pdf">Instructions d&rsquo;hygiène</a></h2>
+            <div class="lang-card__actions">
+              <a class="btn btn--ghost btn--sm" href="downloads/WND_flyer_FR.png">Brochure</a>
+            </div>
+          </li>
+          <li class="lang-card">
+            <img class="lang-card__flag" src="images/flag-es.png" alt="">
+            <h2 class="lang-card__name"><a href="downloads/WND-instructions-ES.pdf">Instrucciones de higiene</a></h2>
+            <div class="lang-card__actions">
+              <a class="btn btn--ghost btn--sm" href="downloads/WND_flyer_ES.png">Folleto informativo</a>
+            </div>
+          </li>
+          <li class="lang-card">
+            <img class="lang-card__flag" src="images/flag-slovenia.png" alt="">
+            <h2 class="lang-card__name"><a href="downloads/WND-instructions-SLO.pdf">Higienska navodila</a></h2>
+            <div class="lang-card__actions">
+              <a class="btn btn--ghost btn--sm" href="downloads/WND_flyer_SLO.png">Brošura</a>
+            </div>
+          </li>
+          <li class="lang-card">
+            <img class="lang-card__flag" src="images/flag-ru.png" alt="">
+            <h2 class="lang-card__name"><a href="downloads/WND-instructions-RU.pdf">Гигиенические инструкции</a></h2>
+            <div class="lang-card__actions">
+              <a class="btn btn--ghost btn--sm" href="downloads/WND_flyer_RU.png">Информационная брошюра</a>
+            </div>
+          </li>
+          <li class="lang-card">
+            <img class="lang-card__flag" src="images/flag-tr.jpg" alt="">
+            <h2 class="lang-card__name"><a href="downloads/WND-instructions-TR.pdf">Hijyen kuralları</a></h2>
+            <div class="lang-card__actions">
+              <a class="btn btn--ghost btn--sm" href="downloads/WND_flyer_TR.png">Bilgilendirme broşürü</a>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
   </main>
 
   <footer class="site-footer">
-    <div class="site-footer__inner">
-      <p>Did you wash your caving suit? &middot; <a href="contact.html">Contact us</a></p>
+    <div class="container site-footer__inner">
+      <p>Did you wash your caving suit?</p>
+      <nav aria-label="Footer">
+        <a href="index.html">Prevent the spread of white-nose disease</a>
+        <a href="library.html">Language library</a>
+        <a href="contact.html">Contact</a>
+        <a href="projects.html">Project Berger 2026</a>
+      </nav>
     </div>
   </footer>
 </body>
