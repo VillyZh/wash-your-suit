@@ -5,8 +5,8 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
     Roboto, Helvetica, Arial, sans-serif;
 
-  --container: 1100px;
-  --content: 820px;
+  --container: 1264px;
+  --content: 1200px;
 
   --radius-sm: 10px;
   --radius: 16px;
@@ -506,7 +506,7 @@ figcaption {
    ========================================================================== */
 .lang-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
   gap: clamp(1rem, 2vw, 1.4rem);
   margin: 0;
   padding: 0;
@@ -514,9 +514,11 @@ figcaption {
 }
 
 .lang-card {
-  display: flex;
-  flex-direction: column;
-  gap: 0.9rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  column-gap: 1rem;
+  row-gap: 0.55rem;
   padding: 1.35rem;
   background: var(--surface);
   border: 1px solid var(--border);
@@ -532,6 +534,8 @@ figcaption {
 }
 
 .lang-card__flag {
+  grid-row: 1;
+  align-self: start;
   width: 56px;
   height: 38px;
   object-fit: cover;
@@ -541,23 +545,23 @@ figcaption {
 }
 
 .lang-card__name {
+  grid-column: 2;
+  align-self: center;
   margin: 0;
   font-size: 1.08rem;
   font-weight: 700;
 }
 
-.lang-card__name a {
-  color: var(--text);
-  text-decoration: none;
-}
-
-.lang-card__name a:hover {
-  color: var(--accent-2);
-}
-
 .lang-card__actions {
-  margin-top: auto;
-  padding-top: 0.25rem;
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.lang-card__actions .btn {
+  max-width: 100%;
 }
 
 /* ==========================================================================
@@ -590,6 +594,91 @@ figcaption {
   border-radius: 50%;
   background: var(--accent);
   opacity: 0.7;
+}
+
+/* ==========================================================================
+   Page hero banners
+   ========================================================================== */
+.lead {
+  max-width: 62ch;
+  font-size: 1.15rem;
+  color: var(--muted);
+}
+
+.byline {
+  max-width: 62ch;
+  margin: 0.6rem 0 0;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+
+.page-hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: clamp(300px, 46vh, 480px);
+  overflow: hidden;
+  background-color: var(--surface-2);
+  background-size: cover;
+  background-position: center 40%;
+}
+
+.page-hero__inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+  padding-block: clamp(1.75rem, 6vw, 3.25rem);
+}
+
+.page-hero h1 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(1.9rem, 5vw, 3.25rem);
+  text-shadow:
+    -1.5px -1.5px 0 #000,
+     1.5px -1.5px 0 #000,
+    -1.5px  1.5px 0 #000,
+     1.5px  1.5px 0 #000,
+    -1.5px  0     0 #000,
+     1.5px  0     0 #000,
+     0     -1.5px 0 #000,
+     0      1.5px 0 #000,
+     0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+.page-hero + .container {
+  padding-top: clamp(2rem, 5vw, 3rem);
+}
+
+.page-hero--home {
+  background-image: url("../images/background/cave-podillia.jpg");
+}
+
+.page-hero--library {
+  background-image: url("../images/background/cave-krizna.jpg");
+  background-position: center;
+}
+
+.page-hero--contact {
+  background-image: url("../images/background/bat-myotis-capaccinii.jpg");
+}
+
+.page-hero--projects {
+  background-image: url("../images/background/cave-urushka-maara.jpg");
+}
+
+.page-hero--wnd {
+  background-image: url("../images/background/wnd-banner.jpg");
+  background-position: center bottom;
 }
 
 /* ==========================================================================

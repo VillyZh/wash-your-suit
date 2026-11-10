@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" as="image" href="images/background/cave-krizna.jpg">
   <script defer src="js/main.js"></script>
 </head>
 <body>
@@ -27,7 +28,8 @@
       </button>
       <nav id="site-nav" class="site-nav" aria-label="Main">
         <ul>
-          <li><a href="index.html">Prevent the spread of white-nose disease</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="white-nose-disease.html">White-nose disease</a></li>
           <li><a href="library.html" aria-current="page">Language library</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="projects.html">Project Berger 2026</a></li>
@@ -37,60 +39,70 @@
   </header>
 
   <main id="main">
-    <div class="container">
-      <header class="page-head">
+    <section class="page-hero page-hero--library">
+      <div class="container page-hero__inner">
         <h1>Language library</h1>
-        <p class="lead">Hygiene instructions and flyers for bat-friendly caving, available for download in the languages below.</p>
-      </header>
+      </div>
+    </section>
+
+    <div class="container">
+      <p class="lead">Hygiene instructions and flyers for bat-friendly caving, available for download in the languages below.</p>
 
       <section class="section reveal">
         <ul class="lang-list">
           <li class="lang-card">
             <img class="lang-card__flag" src="images/flag-hygiene.png" alt="">
-            <h2 class="lang-card__name"><a href="downloads/WND-instructions-EN.pdf">Hygiene instructions</a></h2>
+            <h2 class="lang-card__name">Hygiene instructions</h2>
             <div class="lang-card__actions">
+              <a class="btn btn--primary btn--sm" href="downloads/WND-instructions-EN.pdf">Full article</a>
               <a class="btn btn--ghost btn--sm" href="downloads/WND_flyer_EN.png">Flyer</a>
             </div>
           </li>
           <li class="lang-card">
             <img class="lang-card__flag" src="images/flag-bg.jpg" alt="">
-            <h2 class="lang-card__name"><a href="downloads/WND-instructions-BG.pdf">Хигиенни инструкции</a></h2>
+            <h2 class="lang-card__name">Хигиенни инструкции</h2>
             <div class="lang-card__actions">
+              <a class="btn btn--primary btn--sm" href="downloads/WND-instructions-BG.pdf">Пълна статия</a>
               <a class="btn btn--ghost btn--sm" href="downloads/WND_flyer_BG.png">Брошура</a>
             </div>
           </li>
           <li class="lang-card">
             <img class="lang-card__flag" src="images/flag-fr.png" alt="">
-            <h2 class="lang-card__name"><a href="downloads/WND-instructions-FR.pdf">Instructions d&rsquo;hygiène</a></h2>
+            <h2 class="lang-card__name">Instructions d&rsquo;hygiène</h2>
             <div class="lang-card__actions">
+              <a class="btn btn--primary btn--sm" href="downloads/WND-instructions-FR.pdf">Article complet</a>
               <a class="btn btn--ghost btn--sm" href="downloads/WND_flyer_FR.png">Brochure</a>
             </div>
           </li>
           <li class="lang-card">
             <img class="lang-card__flag" src="images/flag-es.png" alt="">
-            <h2 class="lang-card__name"><a href="downloads/WND-instructions-ES.pdf">Instrucciones de higiene</a></h2>
+            <h2 class="lang-card__name">Instrucciones de higiene</h2>
             <div class="lang-card__actions">
+              <a class="btn btn--primary btn--sm" href="downloads/WND-instructions-ES.pdf">Artículo completo</a>
               <a class="btn btn--ghost btn--sm" href="downloads/WND_flyer_ES.png">Folleto informativo</a>
             </div>
           </li>
           <li class="lang-card">
             <img class="lang-card__flag" src="images/flag-slovenia.png" alt="">
-            <h2 class="lang-card__name"><a href="downloads/WND-instructions-SLO.pdf">Higienska navodila</a></h2>
+            <h2 class="lang-card__name">Higienska navodila</h2>
             <div class="lang-card__actions">
+              <a class="btn btn--primary btn--sm" href="downloads/WND-instructions-SLO.pdf">Celoten članek</a>
               <a class="btn btn--ghost btn--sm" href="downloads/WND_flyer_SLO.png">Brošura</a>
             </div>
           </li>
           <li class="lang-card">
             <img class="lang-card__flag" src="images/flag-ru.png" alt="">
-            <h2 class="lang-card__name"><a href="downloads/WND-instructions-RU.pdf">Гигиенические инструкции</a></h2>
+            <h2 class="lang-card__name">Гигиенические инструкции</h2>
             <div class="lang-card__actions">
+              <a class="btn btn--primary btn--sm" href="downloads/WND-instructions-RU.pdf">Полная статья</a>
               <a class="btn btn--ghost btn--sm" href="downloads/WND_flyer_RU.png">Информационная брошюра</a>
             </div>
           </li>
           <li class="lang-card">
             <img class="lang-card__flag" src="images/flag-tr.jpg" alt="">
-            <h2 class="lang-card__name"><a href="downloads/WND-instructions-TR.pdf">Hijyen kuralları</a></h2>
+            <h2 class="lang-card__name">Hijyen kuralları</h2>
             <div class="lang-card__actions">
+              <a class="btn btn--primary btn--sm" href="downloads/WND-instructions-TR.pdf">Tam makale</a>
               <a class="btn btn--ghost btn--sm" href="downloads/WND_flyer_TR.png">Bilgilendirme broşürü</a>
             </div>
           </li>
@@ -103,7 +115,8 @@
     <div class="container site-footer__inner">
       <p>Did you wash your caving suit?</p>
       <nav aria-label="Footer">
-        <a href="index.html">Prevent the spread of white-nose disease</a>
+        <a href="index.html">Home</a>
+        <a href="white-nose-disease.html">White-nose disease</a>
         <a href="library.html">Language library</a>
         <a href="contact.html">Contact</a>
         <a href="projects.html">Project Berger 2026</a>
